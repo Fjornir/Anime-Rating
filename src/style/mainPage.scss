@@ -1,0 +1,46 @@
+.main {
+  &-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 300px);
+    gap: 10px 20px;
+
+    &-item {
+      position: relative;
+      max-width: 300px;
+
+      .anime-card {
+        height: 400px;
+
+        &__image {
+          height: 400px;
+          width: 300px;
+        }
+
+        &-name-wrapper {
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 15px;
+          padding-left: 45px;
+          text-align: right;
+
+          &__title {
+            width: 240px;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 900;
+            font-size: 24px;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
