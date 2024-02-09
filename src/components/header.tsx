@@ -1,7 +1,10 @@
-import { log } from "console";
 import React from "react";
+import logo from '../imgs/logo.png'
+
 function Header() {
-  return <div className="App"></div>;
+  return <header className="header">
+  <img className="header__logo" src={logo} alt="" />
+  </header>;
 }
 
 export default Header;
