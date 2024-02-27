@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Anime-Rating/static/css/main.af8f579f.css",
+    "main.js": "/Anime-Rating/static/js/main.e2a1b34e.js",
+    "static/media/slider-background.png": "/Anime-Rating/static/media/slider-background.3936aa3b38c56a715782.png",
+    "static/media/logo.png": "/Anime-Rating/static/media/logo.6571d19c77cd58597170.png",
+    "index.html": "/Anime-Rating/index.html",
+    "main.af8f579f.css.map": "/Anime-Rating/static/css/main.af8f579f.css.map",
+    "main.e2a1b34e.js.map": "/Anime-Rating/static/js/main.e2a1b34e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af8f579f.css",
+    "static/js/main.e2a1b34e.js"
+  ]
+}
