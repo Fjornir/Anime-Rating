@@ -1,0 +1,35 @@
+.detailed {
+  background-color: #282828;
+  height: 1800px;
+  &-anime {
+    margin-top: 49px;
+    height: 420px;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &-wrapper {
+      display: flex;  
+    }
+    &__image {
+      position: relative;
+      margin-top: 105px;
+      margin-left: 120px;
+      width: 380px;
+      height: 550px;
+    }
+    &__title {
+      margin-top: 105px;
+      margin-left: 25px;
+      color: #ed445c;
+      -webkit-text-stroke: 1px #f8ae89;
+      font-size: 34px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 900;
+    }
+  }
+}
