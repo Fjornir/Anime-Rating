@@ -18,7 +18,7 @@ export interface AnimePageDataType {
   licenseNameRu: string;
   english: string;
   japanese: string;
-  synonyms: string;
+  synonyms: string[];
   kind:
     | "tv"
     | "movie"
@@ -107,4 +107,5 @@ export interface AnimePageDataType {
   descriptionHtml: string;
   descriptionSource: string;
   bannerImage: string;
+  coverImage:string;
 }
