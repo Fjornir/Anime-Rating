@@ -5,7 +5,21 @@ function DetailedAnimePageInfo(props: {
   anime: AnimePageDataType | undefined;
 }) {
   const { anime } = props;
-  
+
+  function animeGenres(
+    props:
+      | { id: number; name: string; russian: string; kind: string }[]
+      | undefined
+  ) {
+    const res: any[] = [];
+
+    props?.forEach((item) => {
+      props[props.length - 1] === item
+        ? res.push(`${item.name}`)
+        : res.push(`${item.name}, `);
+    });
+    return res;
+  }
   function animeStatus(props: string | undefined) {
     switch (props) {
       case "anons":
@@ -105,6 +119,22 @@ function DetailedAnimePageInfo(props: {
         <div className="detailed-anime-info-item__label">Релиз в сезоне:</div>
         <div className="detailed-anime-info-item__data">
           {animeSeasons(anime?.season)}
+        </div>
+      </div>
+      <div className="detailed-anime-info-item">
+        <div className="detailed-anime-info-item__label">Релиз в сезоне:</div>
+        <div className="detailed-anime-info-item__data detailed-anime-info-item__genres">
+          {animeGenres(anime?.genres)}
+        </div>
+      </div>
+      <div className="detailed-anime-info-item">
+        <div className="detailed-anime-info-item__label">Студия:</div>
+        <div className="detailed-anime-info-item__data detailed-anime-info-item__studios">
+          {anime?.studios.map((item) => {
+            return (
+                <img src={item.imageUrl} alt="альтернативный текст" />
+            );
+          })}
         </div>
       </div>
     </div>

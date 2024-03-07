@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import type { AnimePageDataType } from "../types/Index";
 import Header from "../components/header";
 import DetailedAnimePageInfo from "./detailedAnimePageComponents/detailedAnimePageInfo";
+import DetailedAnimePageScreenshotsSlider from "./detailedAnimePageComponents/detailedAnimePageScreenshotsSlider";
+import DetailedAnimePageVideosSlider from "./detailedAnimePageComponents/detailedAnimePageVideosSlider";
 
 function DetailedAnimePage() {
   const [anime, setAnime] = useState<AnimePageDataType>();
@@ -16,6 +18,11 @@ function DetailedAnimePage() {
     let res = await fetch(`http://localhost:8080/anime/${id}`);
     let animeJson = await res.json();
     setAnime(animeJson);
+  }
+
+  function parseDescription() {
+    const parcedDescription = anime?.description.replace(/\[.*?\]/g, "");
+    return parcedDescription;
   }
 
   return (
@@ -61,7 +68,16 @@ function DetailedAnimePage() {
             </div> */}
           </div>
           <DetailedAnimePageInfo anime={anime}></DetailedAnimePageInfo>
+          <div className="detailed-anime-description">{parseDescription()}</div>
         </div>
+      </div>
+      <div className="detailed-anime-previews">
+        <DetailedAnimePageVideosSlider
+          anime={anime}
+        ></DetailedAnimePageVideosSlider>
+        <DetailedAnimePageScreenshotsSlider
+          anime={anime}
+        ></DetailedAnimePageScreenshotsSlider>
       </div>
     </div>
   );
